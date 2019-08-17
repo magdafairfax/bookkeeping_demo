@@ -12,7 +12,7 @@ I tried to implement a database structure which reflects the
 given transaction interfce. The relationsship between Transactions and 
 Tags is one to many.
 
-I edcreat a bidirectional association with a @OneToMany annotation on the parent side
+I created a bidirectional association with a @OneToMany annotation on the parent side
 of the relationship and a @ManyToOne annotation on the child side of the relationship.
 With annotation @@ManyToOne and @OneToMany is very easy to implement all
 methods given in Transaction interface.
@@ -25,8 +25,10 @@ I changed the name of  Transaction interface given in specification into Transac
 I didn't need to define al the methods because Springboot will do that for me using @Repository anotation. 
 
 I created a controller and test with the transaction with Postman. 
-How to get a jeson list of all transactions:  http://localhost:8080/trans/
+How to get a json list of all transactions:  http://localhost:8080/trans/
 
-GET :  http://localhost:8080/trans/'rc1'/tags find the number of tags
+GET :  http://localhost:8080/trans/rc1/tags find the number of tags
+
+To get a specific transactions http://localhost:8080/trans/rc1
 
 I also added a couple of unit tests.

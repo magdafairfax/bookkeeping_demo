@@ -1,5 +1,7 @@
 package com.finance.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -11,6 +13,7 @@ public class Tags {
     @GeneratedValue
     private Long id;
 
+    @JsonBackReference  // add this to prevent Jackson (json) infinite recursion problem
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="transactionId", referencedColumnName = "id" ,updatable = false,insertable = false)
     private Transactions transactions;
