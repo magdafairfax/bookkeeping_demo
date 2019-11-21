@@ -17,7 +17,7 @@ of the relationship and a @ManyToOne annotation on the child side of the relatio
 With annotation @@ManyToOne and @OneToMany is very easy to implement all
 methods given in Transaction interface.
 There isn't a lot of source code to show but but Springboot generates
-everithing behind the scens, meaning all necessary beans and wiring.
+everything behind the scens, meaning all necessary beans and wiring.
 
 You can acces the database http://localhost:8080/h2-console/
 
