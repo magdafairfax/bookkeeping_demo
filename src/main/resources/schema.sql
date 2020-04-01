@@ -23,3 +23,11 @@ CREATE TABLE TagType (
     tagtype VARCHAR(250) NOT NULL,
     description VARCHAR(250),
 );
+
+DROP TABLE IF EXISTS Component;
+CREATE TABLE Component (
+    id              INT(11) unsigned NOT NULL AUTO_INCREMENT,
+    value_one       INT NOT NULL,
+    value_two       INT NOT NULL,
+    value_three     DECIMAL NOT NULL
+)
